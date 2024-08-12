@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Круговая диаграмма SVG</title>
+    <link href='style.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="root">
+        <h1>Моя команда</h1>
+
+        <div class="container">
+            <div class="learning rounded">
+                <h2>Обученность команды<span class="info">&#x24D8</span></h2>
+
+                <div class="donut-container">
+                    <div class="donut-chart">
+                        <div class="status">70%</div>
+                    </div>
+
+                    <div class="legend">
+                        <h3>Курсы и траектории</h3>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="dot" style="background-color: #00a75c;"></div> Завершено
+                                </td>
+                                <td>70%</td>
+                                <td class="counter">(7)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="dot" style="background-color: #e9841d;"></div> В процессе
+                                </td>
+                                <td>10%</td>
+                                <td class="counter">(1)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="dot" style="background-color: #b6d4ed;"></div>Не начато
+                                </td>
+                                <td>10%</td>
+                                <td class="counter">(1)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="dot" style="background-color: #ec133d;"></div> Не пройдено
+                                </td>
+                                <td>10%</td>
+                                <td class="counter">(1)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress rounded">
+                <h2>Прогресс сотрудников <span class="info">&#x24D8</span></h2>
+                <div class="speedomenter">
+                    <div class="inner"></div>
+                    <div class="bar"></div>
+                    <div class="status">2/5</div>
+                </div>
+                <div class="text">
+                    Сотрудников завершили обучение
+                </div>
+            </div>
+
+            <div class="attention rounded">
+                <h2>Обратите внимание</h2>
+                <div class="wrapper">
+                    <div><span class="row">
+                            <div class="warning">!</div>&ensp;Не прошли обучение: 1
+                        </span></div>
+                    <div><span class="row">
+                            <div class="warning">!</div>&ensp;Не заходили на портал: 1
+                        </span></div>
+                    <div><span class="row">
+                            <div class="warning">!</div>&ensp;Не были более 2 недель: 1
+                        </span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

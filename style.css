@@ -1,0 +1,313 @@
+body {
+    background-color: #f3f8fc;
+    font-family: sans-serif;
+}
+
+.root {
+    padding-top: 100px;
+    width: 1090px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info {
+    font-size: 12px;
+}
+
+.root > h1 {
+    font-size: 20px;
+    margin-left: 42px;
+}
+
+.container {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 280px;
+}
+
+.rounded {
+    border-radius: 40px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    filter: drop-shadow(0px 3px 3px #e0e6ed);
+}
+
+.rounded > h2 {
+    font-size: 16px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 32px;
+}
+
+.learning {
+    width: 443px;
+    height: inherit;
+}
+
+.progress {
+    width: 300px;
+    height: inherit;
+}
+
+.attention {
+    width: 280px;
+    height: inherit;
+}
+
+/*
+Donut chart and legend blocks.
+*/
+
+.donut-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.donut-chart {
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+
+    background: conic-gradient( 
+     #00a75c 260deg, #e9841d 260deg 280deg, #ec133d 280deg 300deg, #b6d4ed 300deg 360deg);
+}
+
+.donut-chart > .status {
+    position: relative;
+    border-radius: 64px;
+    top: 16px;
+    left: 16px;
+    width: 128px;
+    height: 128px;
+    background: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 32px;
+    line-height: 128px;
+}
+
+.legend {
+    font-size: 12px;
+}
+
+.legend > h3 {
+    font-size: 12px;
+}
+
+.legend .dot {
+    background-color: black;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+}
+
+.legend tr {
+    height: 28px;
+}
+
+.legend .counter {
+    color: #808080;
+}
+
+/*
+Speedometer chart block.
+*/
+
+.speedomenter {
+    margin-left: 40px;
+    margin-right: 40px;
+    position: relative;
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.speedomenter > .inner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 160px;
+    height: 160px;
+    border: 20px solid #e6f1f9;
+    border-bottom: none;
+    border-radius: 200px 200px 0 0;
+}
+
+.speedomenter > .bar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 160px;
+    height: 80px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border: 20px solid #e9841d;
+    border-bottom: 0;
+    transform-origin: 100px 100px;
+    transform: rotate(-120deg);
+}
+
+.speedomenter > .status {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 32px;
+    line-height: 180px;
+}
+
+.progress .text {
+    margin-top: 24px;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 12px;
+    text-align: center;
+    padding: 0 32px;
+}
+
+/*
+Attention block
+*/
+
+.wrapper {
+    margin-left: 40px;
+}
+
+.warning {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    background-color: red;
+}
+
+.wrapper .row {
+    font-size: 12px;
+    border: 1px solid #e6f1f9 ;
+    padding: 4px;
+    border-radius: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.wrapper > div {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/* 
+#donut {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: conic-gradient(
+     red 0deg 80deg,
+     green 180deg 360deg,
+      orange 0deg 80deg,
+     grey 0deg 80deg
+    ); 
+  }
+
+  #donut::before {
+    content: "";
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: #fff;
+  }
+
+  #donut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #legend {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  #legend div { padding: 0 10px;}
+  #segment1 {background: red;}
+  #segment2 {background: green;}
+  #segment3 {background: blue;}
+  
+  .progress {
+      position: relative;
+      margin: 4px;
+      float: left;
+      text-align: center;
+  }
+  .barOverflow {
+      position: relative;
+      width: 180px; height: 90px;
+      margin-bottom: -14px;
+      overflow: hidden;
+  }
+  .bar {
+      position: absolute;
+      top: 0; left: 0;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      border: 10px solid #ccc;
+      border-bottom-color: #0bf;
+      border-right-color: #0bf;
+  }
+  body {
+      background-color: lightgray;
+    }
+    .page {
+      width: 1090px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between ;
+    }
+    .round {
+      width: 300px;
+      height: 200px;
+    }
+    .progress {
+      width: 300px;
+      height: 200px;
+    }
+    .attention {
+      width: 400px;
+      height: 200px;
+    }
+    .round {
+      margin: 10px;
+      background-color: white;
+      filter: drop-shadow(0px 10px 4px gray);
+      border-radius: 15px;
+    }
+    .text {
+      margin-left: 20px;
+      
+    }
+    .block1 {
+      width: 200px;
+      height: 200px;
+      margin: 20px;
+      background: red;
+    }
+    .block2 {
+    
+    }
+  
+     */
